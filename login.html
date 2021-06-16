@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>formsample</title>
+    <link rel="stylesheet" type="text/css" href="login.css" media="all" />
+    <style>
+        body,p,form,input{margin: 0}
+        #form{
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #555;
+        }
+
+        form p{
+            font-size: 14px;
+        }
+
+        .form-title{
+            text-align: center;
+            }
+
+        .mail,.pass{
+            margin-bottom: 20px;
+            }
+        input[type="email"],
+        input[type="password"] {
+            width: 300px;
+            padding: 4px;
+            font-size: 14px;
+            }
+            
+        .submit{
+            text-align: right;
+            }
+    </style>
+</head>
+<body>
+<div id="form">
+    <p class="form-title">ログイン</p>
+    <form action="post">
+        <p>e-mail</p>
+        <p class="mail"><input type="email" name="mail" /></p>
+        <p>Password</p>
+        <p class="pass"><input type="password" name="pass" /></p>
+        <p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
+        <a href="#">新規登録はこちら</a>
+        <a href="#">パスワードを忘れた場合</a>
+        <p class="submit"><input type="submit" value="ログイン" /></p>
+    </form>
+</div>
+</body>
+</html>
