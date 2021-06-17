@@ -2,21 +2,53 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>new_logindisplay</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <title>new_login_display</title>
+    <link rel="stylesheet" type="text/css" href="login.css" media="all" />
+    <style>
+        body,p,form,input{margin: 0}
+        #form{
+            width: px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #555;
+            }
+
+        form p{
+            font-size: 14px;
+            }
+
+        .form-title{
+            text-align: center;
+            }
+
+        .mail,.pass{
+            margin-bottom: 20px;
+            }
+            
+        input[type="email"],
+        input[type="password"] {
+            width: 300px;
+            padding: 4px;
+            font-size: 14px;
+            }
+            
+        .submit{
+            text-align: right;
+            }
+    </style>
 </head>
 <body>
 <div id="form">
     <p class="form-title">新規登録</p>
     <form action="post">
         <p>名前</p>
-        <p class="mail"><input type="email" name="mail" /></p>
+        <p class="name"><input type="text" name="name" /></p>
         <p>生年月日</p>
-        <p class="birth"><input type="text" name="birth"></p>
+        <p class="birthday"><input type="text" name="birth"></p>
         <p>e-mail</p>
-        <p class="pass"><input type="password" name="pass" /></p>
+        <p class="e-mail"><input type="email" name="pass" /></p>
         <p>パスワード</p>
-        <p><input type="text"></p>
+        <p class="pass"><input type="password" name="pass"></p>
         <p class="submit"><input type="submit" value="新規登録する" /></p>
     </form>
 </div>
