@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>ログイン画面</title>
-    <link rel="stylesheet" type="text/css" href="login.css" media="all" />
     <style>
         body,p,form,input{margin: 0}
         #form{
@@ -24,6 +23,7 @@
         .mail,.pass{
             margin-bottom: 20px;
             }
+        
         input[type="email"],
         input[type="password"] {
             width: 300px;
@@ -45,9 +45,11 @@
         <p>Password</p>
         <p class="pass"><input type="password" name="pass" /></p>
         <p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
-        <a href="#">新規登録はこちら</a>
+        <!--新規登録画面のURLを下に書いてください-->
+        <a href="新規登録画面のURL">新規登録はこちら</a>
         <a href="#">パスワードを忘れた場合</a>
-        <p class="submit"><input type="submit" value="ログイン" /></p>
+        <!--くどうくんの画面のURLを下に書いてください-->
+        <p class="submit"><input type="button" value="ログイン" onclick="location.href='くどうくんの画面のURL'"/></p>
     </form>
 </div>
 </body>
