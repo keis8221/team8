@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>CSV画面</title>
+    <style>
+        body,p,form,input{margin: 0}
+        #form{
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #555;
+        }
+
+        form p{
+            font-size: 14px;
+        }
+
+        .form-title{
+            text-align: center;
+            }
+    </style>
+</head>
+<body>
+<table>
+<tbody id="output.csv"></tbody>
+</table>
+<div id="output.csv"></div>
+<script>
+const outputElement = document.getElementById('output.csv');
+
+function getCsvData(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArray(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArray(data) {
+ const dataArray = [];
+ const dataString = data.split('\n');
+ for (let i = 0; i < dataString.length; i++) {
+  dataArray[i] = dataString[i].split(',');
+ }
+ let insertElement = '';
+ dataArray.forEach((element) => {
+  insertElement += '<tr>';
+  element.forEach((childElement) => {
+   insertElement += `<td>${childElement}</td>`
+  });
+  insertElement += '</tr>';
+ });
+ outputElement.innerHTML = insertElement;
+}
+
+getCsvData('sample2.csv');
+</script>
+</body>
+</html>
