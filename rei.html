@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="ja"> 
+<head><meta charset="UTF-8">
+</head> 
+<body>
+<div id="tableData">データを表示</div>
+<script>
+// CSVファイルの読み込む関数を定義 
+function getCSV(){
+ let req = new XMLHttpRequest(); // ファイルを読込むため XMLHttpRrequestオブジェクトを生成 
+ req.open("get", "sample2.csv", true); // 読込ファイル(sample.csv)を指定 
+ req.send(null); // HTTPリクエストの発行 
+ // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ 
+ req.onload = function(){
+ convertCSVtoArray(req.responseText); // 読み込んだ CSVデータを次に渡す 
+ }
+ }
+ // 読み込んだ CSVデータを二次元配列に変換する関数convertCSVtoArray()の定義 
+function convertCSVtoArray(str)
+{ // 読み込んだ CSVデータが文字列として渡される
+let result = []; // 二次元配列を入れるための配列 
+let tmp = str.split("\n"); // 改行を区切り文字とした一次元配列を生成 
+  // 各行ごとにカンマで区切った文字列を要素とした二次元配列を生成
+let tbl = "<table border='1'>"; // tableを生成 
+for (let i=0; i<tmp.length; i++){
+result[i] = tmp[i].split(','); // 二次元配列を生成 
+tbl += "<tr>";
+for (var j=0; j<result[i].length; j++){
+tbl += "<td>"+result[i][j]+"</td>"; // 各セルに二次元配列要素を記入 
+}
+tbl +="</tr>";
+}
+tbl += "</table>"; // tableを閉じる 
+document.querySelector("#tableData").innerHTML =tbl; // tableを表示 //
+alert(result);
+}
+getCSV(); // CSVファイルの読み込む 
+</script> 
+</body> 
+</html>
