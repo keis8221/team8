@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ホーム画面</title>
+    <style>
+        .header{
+            border-bottom:solid 30px rgb(108, 190, 108);
+        }
+
+        .teacher-name{
+            font-size:20px;
+            position:absolute;
+            text-align:left;
+            color:black;
+            float:right;
+        }
+        
+        .attend-info{
+            text-align: center;
+            padding-top:10px;
+        }
+
+        .attend-start{
+            text-align: center;
+            padding-top:10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!--下のdivタグの間にデータベースのIDと紐づけられた教師名を入れる-->
+        <div class="teacher-name">教員名</div>
+    </div>
+    <label for="subject">授業選択</label>
+    <select name="subject" id="subject">
+        <!--教科名の部分に教員が担当する教科名を入れる-->
+      <option value="subject">教科名</option>
+      <option value="subject">教科名</option>
+      <option value="subject">教科名</option>
+    </select>
+</body>
+</html>
