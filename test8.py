@@ -2,8 +2,9 @@ import linecache
 import pandas as pd
 
 df = pd.read_csv('-F1.csv')
+N=len(df)
 
-for i in range(2):
+for i in range(N):
  target_line = linecache.getline('-F1.csv', i+2)
  num = target_line.count('×')
 
