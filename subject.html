@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<meta chartest="UTF-8">
     <title>教科選択画面</title>
     <style>
+    *{margin: 0;padding: 0;}
+    .proo{position:fixed;background: #fff;width: 100%;height: 100vh;}
+    .proo span{width: 100%;display:block;position:absolute;top:50%;left: 50%;transform:translate(-50%,-50%);font-size:20
+       px;font-weight: bold;text-align: center;}
+    .header{
+        padding: 10px 0;
+        border-bottom: 5px solid #d2d2d2;
+    }
+    .header-inner{
+        position: relative;
+        height: 40px;
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .logo{
+        position: absolute;
+        top: 50%;
+         transform: translateY(-50%);
+        width: 200px;
+    }
+    .nav{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    .nav a{
+        color: gray;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    </style>
+    <style>
         table{
-            width:60%;
+            width:80%;
             text-align: center;
             margin: auto;
         }
     </style>
 </head>
 <body>
+
+
+   <header class="header">
+     <div class="header-inner">
+       <h1 class="logo">講義選択</h1>
+      <nav class="nav">
+         <a href="{{url_for('login')}}">ログアウト</a>
+         <a href="">タブ2</a>
+         <a href="">タブ3</a>
+      </nav>
+      </div>
+   </header>
     <table rules="all">
         <tr>
             <td>曜日</td>
@@ -22,145 +68,145 @@
             <td>月</td>
             <td>１限</td>
             <td>大島恵理子</td>
-            <td><a href="#">心理学(M1)</a></td>
+            <td><a href="{{url_for('ttt')}}">心理学(M1)</a></td>
         </tr>
         <tr>
             <td>月</td>
             <td>２限</td>
             <td>西田順</td>
-            <td><a href="#">教養英語</a></td>
+            <td><a href="{{url_for('ttt1')}}">教養英語</a></td>
         </tr>
         <tr>
             <td>月</td>
             <td>３限</td>
             <td>武山寛子</td>
-            <td><a href="#">情報理論</a></td>
+            <td><a href="{{url_for('ttt2')}}">情報理論</a></td>
         </tr>
         <tr>
             <td>月</td>
             <td>４限</td>
             <td>進藤健児</td>
-            <td><a href="#">システム開発演習</a></td>
+            <td><a href="{{url_for('ttt3')}}">システム開発演習</a></td>
         </tr>
         <tr>
             <td>火</td>
             <td>２限</td>
             <td>豊崎史郎</td>
-            <td><a href="#">英会話</a></td>
+            <td><a href="{{url_for('ttt4')}}">英会話</a></td>
         </tr>
         <tr>
             <td>火</td>
             <td>３限</td>
             <td>水沼勝敏</td>
-            <td><a href="#">電子回路学(T3_1)</a></td>
+            <td><a href="{{url_for('ttt5')}}">電子回路学(T3_1)</a></td>
         </tr>
         <tr>
             <td>火</td>
             <td>３限</td>
             <td>古澤範人</td>
-            <td><a href="#">物理学</a></td>
+            <td><a href="{{url_for('ttt6')}}">物理学</a></td>
         </tr>
         <tr>
             <td>火</td>
             <td>４限</td>
             <td>秋葉紀明</td>
-            <td><a href="#">応用数学</a></td>
+            <td><a href="{{url_for('ttt7')}}">応用数学</a></td>
         </tr>
         <tr>
             <td>火</td>
             <td>５限</td>
             <td>秋葉紀明</td>
-            <td><a href="#">数学演習</a></td>
+            <td><a href="{{url_for('ttt8')}}">数学演習</a></td>
         </tr>
         <tr>
             <td>水</td>
             <td>１・２限</td>
             <td>鬼野極</td>
-            <td><a href="#">プログラミング</a></td>
+            <td><a href="{{url_for('ttt9')}}">プログラミング</a></td>
         </tr>
         <tr>
             <td>水</td>
             <td>３限</td>
             <td>土橋健二</td>
-            <td><a href="#">経済学</a></td>
+            <td><a href="{{url_for('ttt10')}}">経済学</a></td>
         </tr>
         <tr>
             <td>水</td>
             <td>３限</td>
             <td>鷲見和紀</td>
-            <td><a href="#">文学・文化学(W3_2)</a></td>
+            <td><a href="{{url_for('ttt11')}}">文学・文化学(W3_2)</a></td>
         </tr>
         <tr>
             <td>水</td>
             <td>４限</td>
             <td>三谷和巳</td>
-            <td><a href="#">信号処理</a></td>
+            <td><a href="{{url_for('ttt12')}}">信号処理</a></td>
         </tr>
         <tr>
             <td>水</td>
             <td>５限</td>
             <td>有本太志</td>
-            <td><a href="#">保健体育</a></td>
+            <td><a href="{{url_for('ttt13')}}">保健体育</a></td>
         </tr>
         <tr>
             <td>水</td>
             <td>５限</td>
             <td>細川靖司</td>
-            <td><a href="#">コミュニケーション入門</a></td>
+            <td><a href="{{url_for('ttt14')}}">コミュニケーション入門</a></td>
         </tr>
         <tr>
             <td>木</td>
             <td>２限</td>
             <td>三谷和巳</td>
-            <td><a href="#">計算機アーキテクチャ</a></td>
+            <td><a href="{{url_for('ttt15')}}">計算機アーキテクチャ</a></td>
         </tr>
         <tr>
             <td>木</td>
             <td>３・４限</td>
             <td>進藤健児</td>
-            <td><a href="#">情報工学実習</a></td>
+            <td><a href="{{url_for('ttt16')}}">情報工学実習</a></td>
         </tr>
         <tr>
             <td>木</td>
             <td>５限</td>
             <td>高坂信之</td>
-            <td><a href="#">電磁気学</a></td>
+            <td><a href="{{url_for('ttt17')}}">電磁気学</a></td>
         </tr>
         <tr>
             <td>木</td>
             <td>５限</td>
             <td>水沼勝敏</td>
-            <td><a href="#">電子回路学(Th5_2)</a></td>
+            <td><a href="{{url_for('ttt18')}}">電子回路学(Th5_2)</a></td>
         </tr>
         <tr>
             <td>金</td>
             <td>１限</td>
             <td>西田順</td>
-            <td><a href="#">科学英語</a></td>
+            <td><a href="{{url_for('ttt19')}}">科学英語</a></td>
         </tr>
         <tr>
             <td>金</td>
             <td>２限</td>
             <td>澤井信彦</td>
-            <td><a href="#">情報ネットワーク</a></td>
+            <td><a href="{{url_for('ttt20')}}">情報ネットワーク</a></td>
         </tr>
         <tr>
             <td>金</td>
             <td>３限</td>
             <td>武山寛子</td>
-            <td><a href="#">アルゴリズムとデータ構造</a></td>
+            <td><a href="{{url_for('ttt21')}}">アルゴリズムとデータ構造</a></td>
         </tr>
         <tr>
             <td>金</td>
             <td>４限</td>
             <td>鷲見和紀</td>
-            <td><a href="#">文学・文化学(F4_1)</a></td>
+            <td><a href="{{url_for('ttt22')}}">文学・文化学(F4_1)</a></td>
         </tr>
         <tr>
             <td>金</td>
             <td>４限</td>
             <td>大島恵理子</td>
-            <td><a href="#">心理学(F4_2)</a></td>
+            <td><a href="{{url_for('ttt23')}}">心理学(F4_2)</a></td>
         </tr>
     </table>
 </body>

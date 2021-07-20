@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>ログイン画面</title>
+    <title>新規登録画面</title>
     <style>
         body,p,form,input{margin: 0}
         #form{
@@ -10,11 +10,12 @@
             margin: 30px auto;
             padding: 20px;
             border: 1px solid #555;
-        }
+            }
 
         form p{
             font-size: 14px;
-        }
+            }
+
         .form-title{
             text-align: center;
             }
@@ -37,17 +38,18 @@
 </head>
 <body>
 <div id="form">
-    <p class="form-title">ログイン</p>
+    <p class="form-title">新規登録</p>
     <form action="post">
+        <p>名前</p>
+        <p class="name"><input type="text" name="name" /></p>
+        <p>生年月日</p>
+        <p class="birthday"><input type="text" name="birth"></p>
         <p>e-mail</p>
-        <p class="mail"><input type="email" name="mail" /></p>
-        <p>Password</p>
-        <p class="pass"><input type="password" name="pass" /></p>
-        <p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
-        <!--新規登録画面のURLを下に書いてください-->
-        <a href="{{url_for('apply')}}">新規登録はこちら</a>
+        <p class="e-mail"><input type="email" name="pass" /></p>
+        <p>パスワード</p>
+        <p class="pass"><input type="password" name="pass"></p>
         <!--くどうくんの画面のURLを下に書いてください-->
-        <p class="submit"><a href="{{url_for('subject')}}"><button type="button" class="btn btn-primary" >ログイン</button></a></p>
+       <p class="submit"><a href="{{url_for('login')}}"><button type="button" class="btn btn-primary" >新規登録する</button></a></p>
     </form>
 </div>
 </body>

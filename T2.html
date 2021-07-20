@@ -1,0 +1,35 @@
+{%extends "layout.html"%}
+{%block content%}
+  <h1>豊崎史郎    英会話     〇：出席　△：遅刻　✕：欠席</h1>
+    <a href="{{url_for('downfile4')}}"><button type="button" class="btn btn-primary" >Download</button></a>
+    <table class="table table-striped  table-bordered table-hover">
+    <thead border="1" class="thead-light">
+    <tbody>
+    {% for list in df%}
+    <tr>
+    <td>{{ list[0]}}</td>
+    <td>{{ list[1]}}</td>
+    <td>{{ list[2]}}</td>
+    <td>{{ list[3]}}</td>
+    <td>{{ list[4]}}</td>
+    <td>{{ list[5]}}</td>
+    <td>{{ list[6]}}</td>
+    <td>{{ list[7]}}</td>
+    <td>{{ list[8]}}</td>
+    <td>{{ list[9]}}</td>
+    <td>{{ list[10]}}</td>
+    <td>{{ list[11]}}</td>
+    <td>{{ list[12]}}</td>
+    <td>{{ list[13]}}</td>
+    <td>{{ list[14]}}</td>
+    <td>{{ list[15]}}</td>
+    <td>{{ list[16]}}</td>
+    <td>{{ list[17]}}</td>
+    <td>{{ list[18]}}</td>
+    <td>{{ list[19]}}</td>
+    </tr>
+    {% endfor%}
+    </tbody>
+    </thead>
+    </table>
+    {% endblock %}
